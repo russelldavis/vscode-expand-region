@@ -49,5 +49,10 @@
     "eslint": "^3.6.0",
     "@types/node": "^6.0.40",
     "@types/mocha": "^2.2.32"
+  },
+  "__metadata": {
+    "id": "1b625615-bded-4797-9806-079abcacfcc1",
+    "publisherDisplayName": "Le Trieu",
+    "publisherId": "4d250ba7-c3ac-487d-bd31-c86fa8517189"
   }
 }
