@@ -9,8 +9,8 @@
     "url": "https://github.com/windwp/vscode-expand-region/issues"
   },
   "repository": {
-        "type": "git",
-        "url": "https://github.com/windwp/vscode-expand-region.git"
+    "type": "git",
+    "url": "https://github.com/windwp/vscode-expand-region.git"
   },
   "homepage": "https://github.com/windwp/vscode-expand-region/blob/master/README.md",
   "engines": {
@@ -28,8 +28,9 @@
       {
         "command": "expand_region",
         "title": "Expand Region"
-      },{
-        "command":"undo_expand_region",
+      },
+      {
+        "command": "undo_expand_region",
         "title": "Undo Expand Region"
       }
     ]
