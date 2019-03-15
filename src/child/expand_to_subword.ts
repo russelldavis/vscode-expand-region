@@ -2,24 +2,27 @@
 import {IResultSelection, getResult, ILine} from '../baseexpander';
 import {expand_to_regex_set } from './expand_to_regex_set';
 export function expand_to_subword(text: string, startIndex: number, endIndex: number): IResultSelection {
-    var regex: RegExp;
-    if (_is_inside_upper(text, startIndex, endIndex)) {
-        regex = /[A-Z]/;
-    } else {
-        regex = /[a-z]/;
-    }
-    let result = expand_to_regex_set(text, startIndex, endIndex, regex, "subword");
-    if (!result) return null;
-    // # check if it is prefixed by an upper char
-    // # expand from camelC|ase| to camel|Case|
-    let upper = /[A-Z]/;
-    if (upper.test(text.substring(result.end - 1, result.end))) {
-        result.end -= 1;
-    }
-    if (!_is_true_subword(text, result)) {
-        return null;
-    }
-    return result;
+    // disabled, i don't like subword expansion
+    return null;
+    
+    // var regex: RegExp;
+    // if (_is_inside_upper(text, startIndex, endIndex)) {
+    //     regex = /[A-Z]/;
+    // } else {
+    //     regex = /[a-z]/;
+    // }
+    // let result = expand_to_regex_set(text, startIndex, endIndex, regex, "subword");
+    // if (!result) return null;
+    // // # check if it is prefixed by an upper char
+    // // # expand from camelC|ase| to camel|Case|
+    // let upper = /[A-Z]/;
+    // if (upper.test(text.substring(result.end - 1, result.end))) {
+    //     result.end -= 1;
+    // }
+    // if (!_is_true_subword(text, result)) {
+    //     return null;
+    // }
+    // return result;
 }
 
 function _is_true_subword(text: string, result: IResultSelection): boolean {
